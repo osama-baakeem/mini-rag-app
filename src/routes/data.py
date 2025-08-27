@@ -67,7 +67,7 @@ async def process_endpoint(project_id: str, process_request: ProcessRequest):
 
     file_id = process_request.file_id
     chunk_size = process_request.chunk_size
-    overlap_size = process_request.overlap_size
+    chunk_overlap = process_request.chunk_overlap
 
     process_controller = ProcessController(project_id=project_id)
     logger.info("Fetching file content...")
@@ -77,7 +77,7 @@ async def process_endpoint(project_id: str, process_request: ProcessRequest):
         file_content=file_content,
         file_id=file_id,
         chunk_size=chunk_size,
-        overlap_size=overlap_size
+        chunk_overlap=chunk_overlap
     )
     logger.info(f"Got {len(file_chunks)} chunks")
 
