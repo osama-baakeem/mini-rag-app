@@ -1,0 +1,12 @@
+services:
+  mongodb:
+    image: mongo:8.0
+    container_name: mongodb
+    ports:
+      - "27007:27017"
+    volumes:
+      - mongodb_data:/data/db   # use Docker-managed volume
+    restart: always
+
+volumes:
+  mongodb_data:
