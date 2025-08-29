@@ -1,4 +1,4 @@
-# in this collection will take chunks
+# in this collection will take chunks and will give it schema
 
 from pydantic import BaseModel, Field, validator
 from typing import Optional

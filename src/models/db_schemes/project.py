@@ -1,3 +1,4 @@
+# gives schema to the project  
 from pydantic import BaseModel, Field, validator
 from typing import Optional
 from bson.objectid import objectid
