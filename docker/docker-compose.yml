@@ -5,8 +5,14 @@ services:
     ports:
       - "27007:27017"
     volumes:
-      - mongodb_data:/data/db   # use Docker-managed volume
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERAME=${MONGO_INITDB_ROOT_USERAME}
+      - MONGO_INITDB_ROOT_PASSWORD=$(MONGO_INITDB_ROOT_PASSWORD)
     restart: always
 
+networks:
+  backend:
+
 volumes:
-  mongodb_data:
+  mongodb_data: 
