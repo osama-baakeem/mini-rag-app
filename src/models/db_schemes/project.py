@@ -31,3 +31,20 @@ class Project(BaseModel):
         Pydantic configuration
         """
         arbitrary_types_allowed = True  # Allow ObjectId type
+
+
+    @classmethod
+    def get_indexes(cls):
+
+        return [
+            {
+                "key": [
+                    ("project_id", 1)
+                    ],
+                "name": "project_id_index_1",
+                "unique": True
+            }
+        ]
+
+
+
