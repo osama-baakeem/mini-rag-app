@@ -48,8 +48,9 @@ class ProjectModel(BaseDataModel):
         """
         # Convert the Pydantic Project model to a dictionary and insert into MongoDB
         result = await self.collection.insert_one(project.dict(by_alias=True, exclude_unset=True))    
+        
         # Assign the MongoDB-generated ObjectId back to the Python project object
-        project._id = result.inserted_id
+        project.id = result.inserted_id
         return project
     
     async def get_project_or_create_one(self, project_id: str):

@@ -17,3 +17,5 @@ class ResponseSignal(Enum):
     FILE_UPLOAD_FAILED = "File upload failed"
     PROCESSING_FAILD = "Processing failed"
     PROCESSING_SUCCESS = "Processing Succeed"
+    NO_FILES_ERROR = "Could not find files"
+    FILE_ID_ERROR = "No file was found with this id"

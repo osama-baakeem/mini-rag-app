@@ -9,7 +9,7 @@ class ProcessRequest(BaseModel):
     Used to configure how an uploaded file should be processed.
     """
     
-    file_id: str
+    file_id: str = None
     chunk_size: Optional[int] = 100
     chunk_overlap: Optional[int] = 20
     do_reset: Optional[int] = 0

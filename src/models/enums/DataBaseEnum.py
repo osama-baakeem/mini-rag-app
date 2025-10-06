@@ -10,3 +10,4 @@ class DataBaseEnum(Enum):
 
     COLLECTION_PROJECT_NAME = "projects"   # Stores project-level information
     COLLECTION_CHUNK_NAME = "chunks"       # Stores processed file chunks
+    COLLECTION_ASSET_NAME = "assets" 
