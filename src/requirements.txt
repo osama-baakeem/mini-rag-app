@@ -12,3 +12,4 @@ pydantic-mongo==3.1.0
 openai==2.2.0
 cohere==5.18.0
 huggingface-hub==0.35.3
+qdrant-client==1.15.1
